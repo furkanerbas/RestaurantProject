@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (Table table in ViewBag.tables)
+    {
+<div class="col-md-4 col-sm-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <h5 class="card-title">@table.TableId</h5>
+        </div>
+        <a href="/Order/Add/@table.TableId" class="btn btn-sm btn-primary">+</a>
+        <a href="/Order/TableOrders/@table.TableId" class="btn btn-sm btn-primary">Listele</a>
+    </div>
+</div>}
+</div>
+
