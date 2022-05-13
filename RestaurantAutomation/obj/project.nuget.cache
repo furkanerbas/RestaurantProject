@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "faicXi9AsiDSSV4fE724Cfi6wF314Zusggv2q604TwChsIxp2V5QDNMxvcAU1rpRVcENgYbah8j9NQEW0adUGQ==",
+  "dgSpecHash": "2Q6S1yveCu3DypFCVOBKcu+isvEFZVm3YIHkt00Zd9HfWkMZzeuEuVPivuxMFYYHkI8q7HD5ShYyhOn9utuedw==",
   "success": true,
   "projectFilePath": "C:\\Users\\303FURKAN_AKSAM\\Desktop\\RestaurantProject\\RestaurantAutomation\\RestaurantAutomation.csproj",
   "expectedPackageFiles": [
@@ -127,8 +127,7 @@
     "C:\\Users\\303FURKAN_AKSAM\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\303FURKAN_AKSAM\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\303FURKAN_AKSAM\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\303FURKAN_AKSAM\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\303FURKAN_AKSAM\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+    "C:\\Users\\303FURKAN_AKSAM\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

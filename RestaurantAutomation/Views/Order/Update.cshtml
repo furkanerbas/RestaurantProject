@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Product Add";
+}
+
+<form action="/Order/Save" method="post">
+    @{
+        if (ViewBag.message != null)
+        {
+            <div class="alert alert-danger">@ViewBag.message</div>
+        }
+    }
+    <div class="mb-3">
+        <label class="form-label">Products</label>
+        <select name="ProductId" class="form-control">
+            @foreach (Product product in ViewBag.products)
+            {
+                <option value="@product.Id">@product.ProductName</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Quantity</label>
+        <input type="text" name="Quantity" class="form-control">
+    </div>
+    <input hidden type="text" name="TableId" class="form-control" value=@ViewBag.tableNumber>
+    <input hidden type="text" name="EmployeeId" class="form-control" value=@ViewBag.orders.EmployeeId>
+    <input hidden type="text" name="Id" class="form-control" value=@ViewBag.orders.Id>
+    <button type="submit" class="btn btn-success  col-md-3">Add</button>
+</form>

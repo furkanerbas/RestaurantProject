@@ -34,6 +34,18 @@ namespace RestaurantAutomation.Controllers
             ViewBag.orders = _orderRepository.GetOrderDtosById(id);
             return View();
         }
+        public IActionResult Save(Order order)
+        {
+            if (order.Id == 0)
+            {
+                this._orderRepository.Add(order);
+            }
+            else
+            {
+                this._orderRepository.Update(order);
+            }
+            return RedirectToAction("Index");
+        }
 
         public IActionResult Add(int id)
         {
@@ -43,10 +55,24 @@ namespace RestaurantAutomation.Controllers
             ViewBag.employees = _employeeRepository.GetAll();
             return View();
         }
-        public IActionResult Save(Order order)
+        public IActionResult Update(int id)
         {
-            this._orderRepository.Add(order);
+            ViewBag.tableNumber = id;
+            ViewBag.products = _productRepository.GetAll();
+            var order = this._orderRepository.GetById(id);
+            if (order == null)
+            {
+                return RedirectToAction("Index");
+            }
+            ViewBag.orders = order;
+            _orderRepository.Update(order);
+            return View();
+        }
+        public IActionResult Delete(int id)
+        {
+            _orderRepository.DeleteById(id);
             return RedirectToAction("Index");
         }
+
     }
 }

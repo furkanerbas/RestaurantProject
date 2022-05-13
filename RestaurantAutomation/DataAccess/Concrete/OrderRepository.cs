@@ -17,12 +17,12 @@ namespace RestaurantAutomation.DataAccess.Concrete
             {
                 var result = from o in context.Orders
                              join p in context.Products on o.ProductId equals p.Id
-                             join t in context.Tables on o.TableId equals t.Id
+                             join t in context.Tables on o.TableId equals t.TableId
                              join e in context.Employees on o.EmployeeId equals e.Id
                              select new OrderDto()
                              {
                                  Id = o.Id,
-                                 BillId = o.BillId,
+                                 EmployeeId = o.EmployeeId,
                                  Product = p.ProductName,
                                  TableNumber = t.TableId,
                                  Quantity = o.Quantity,
@@ -42,7 +42,6 @@ namespace RestaurantAutomation.DataAccess.Concrete
                              select new OrderDto()
                              {
                                  Id = o.Id,
-                                 BillId = o.BillId,
                                  Product = p.ProductName,
                                  TableNumber = t.TableId,
                                  Quantity = o.Quantity,

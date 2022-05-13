@@ -55,6 +55,5 @@ namespace RestaurantAutomation.Core.DataAccess
                 return true;
             }
         }
-
     }
 }
